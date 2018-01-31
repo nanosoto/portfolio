@@ -1,13 +1,13 @@
 <template>
 	<div class="nav">
 		<router-link to="/" class="nav__logo">
-			<span>nanosoto</span>
+			<span>customermopa</span>
 			<!--product designer-->
 		</router-link>
 		<ul class="nav__list">
 			<li class="nav__item">
 				<router-link to="/projects">
-					projects
+					services
 				</router-link>
 			</li>
 			<li class="nav__item">
