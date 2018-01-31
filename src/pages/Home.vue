@@ -42,7 +42,7 @@
 							<transition name="slide-fade-up" mode="out-in" appear>
 								<p class="project__overview">Management web tool that allows individuals to train through demo videos</p>
 							</transition>
-							<img class="project__thumbnail TUS__thumbnail" src="../assets/TUS/tus_home.gif">
+							<img class="project__thumbnail TUS__thumbnail" src="../assets/TUS/red.png">
 						</div>
 					</router-link>
 				</div>
@@ -68,7 +68,7 @@
 
 <script>
 export default {
-  name: 'home'
+  	name: 'home',
 }
 </script>
 
@@ -197,25 +197,26 @@ export default {
 		overflow: visible;
 
 		.project__container {
-			background: linear-gradient(135deg, rgba(153,230,0,1) 0%, rgba(118,173,0,1) 100%);
+			//background: linear-gradient(135deg, rgba(153,230,0,1) 0%, rgba(118,173,0,1) 100%);
 			height: 530px;
 			border-radius: 20px;
+			overflow: hidden;
 			// justify-content: flex-end;
 
 			.project__title {
-				color: #FFF;
+				//color: #FFF;
 			}
 			.project__overview {
-				color: rgba(255, 255, 255, .7);
+				//color: rgba(255, 255, 255, .7);
 			}
 			.TUS__thumbnail {
-				width: 80%;
+				width: 170%;
 				height: auto;
 				position: absolute;
-				bottom: 30px;
-				left: -30px;
-				box-shadow: 0px 2px 34px 0px rgba(0, 0, 0, 0.13);
-				border-radius: 5px;
+				bottom: -75%;
+				right: -50%;
+				//box-shadow: 0px 2px 34px 0px rgba(0, 0, 0, 0.13);
+				//border-radius: 5px;
 			}
 		}
 	}
