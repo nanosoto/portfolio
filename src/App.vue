@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <transition name="slide-fade" mode="out-in" appear>
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -24,33 +22,32 @@ table {border-collapse: collapse; border-spacing: 0;}
 * {box-sizing: border-box; text-rendering: optimizeLegibility !important; -webkit-font-smoothing: antialiased !important;}
 
 html {
-font-family: 'Roboto Mono', monospace;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-overflow-x: hidden; 
-overflow-y: scroll;
-min-height: 100vh;
-background-color: var(--body-background-color, #FFF);
-color: var(--body-text-color, #88a8bc);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+  background-color: var(--body-background-color, #FFF);
+  color: var(--body-text-color, #88a8bc);
 
-font-size: var(--font-size-base);
-color: #88a8bc;
-letter-spacing : 0.14px;
+  font-size: var(--font-size-base);
+  letter-spacing : 0.14px;
 }
 
 ::-moz-selection {
-background-color: #0bd0d9;
-color: #FFF;
-text-shadow: none;
+  background-color: #0bd0d9;
+  color: #FFF;
+  text-shadow: none;
 }
 
 ::selection {
-background-color: #0bd0d9;
-color: #FFF;
-text-shadow: none;
+  background-color: #0bd0d9;
+  color: #FFF;
+  text-shadow: none;
 }
 
 a {
@@ -59,30 +56,26 @@ a {
 }
 
 p {
-line-height: 1.6;
+  line-height: 1.6;
 }
-.slide-fade-enter-active {
-  transition: all 300ms ease;
+
+.intro__tagline span {
+  display: inline-block;
+  min-width: 12.4px;
+
+  &:nth-child(11) {
+    font-style: italic;
+    color: rgba(136, 168, 188, .6);
+    font-weight: 400;
+  }
+
+  &:nth-child(21) {
+    display: block;
+  }
 }
-.slide-fade-leave-active {
-  transition: all 300ms cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
-}
-.slide-fade-up-enter-active {
-  transition: all 300ms ease;
-}
-.slide-fade-up-leave-active {
-  transition: all 300ms cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-up-enter, .slide-fade-up-leave-to {
-  transform: translateY(10px);
-  opacity: 0;
-}
-.child-view {
-  position: absolute;
-  transition: all .5s cubic-bezier(.55,0,.1,1);
+
+.intro__subTagline span {
+  display: inline-block;
+  min-width: 13.34px;
 }
 </style>

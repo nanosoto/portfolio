@@ -1,51 +1,85 @@
 <template>
 
-	<div class="testing">
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project1">Project 1</h1>
-		</transition>
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project2">Project 2</h1>
-		</transition>
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project3">Project 3</h1>
-		</transition>
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project4">Project 4</h1>
-		</transition>
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project5">Project 5</h1>
-		</transition>
-		<transition name="slide-fade-up" mode="out-in" appear>
-			<h1 class="project6">Project 6</h1>
-		</transition>
+		<intersect @enter.once="projectGridIn">
+	<div class="project__grid">
+
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 1</h1>
+				</router-link>
+			</div>
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 2</h1>
+				</router-link>
+			</div>
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 3</h1>
+				</router-link>
+			</div>
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 4</h1>
+				</router-link>
+			</div>
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 5</h1>
+				</router-link>
+			</div>
+			<div class="project__grid-item">
+				<router-link to="/projects/customer-mopa">
+					<h1>Project 6</h1>
+				</router-link>
+			</div>
+
 	</div>
 
+		</intersect>
 </template>
 
 <script>
+import anime from 'animejs'
+import Intersect from 'vue-intersect'
+
 export default {
-  name: 'projects'
+  name: 'projects',
+  components: { Intersect },
+  methods: {
+    projectGridIn() {
+  		anime.timeline()
+  		.add({
+	  		targets: '.project__grid-item',
+	        opacity: [0, 1],
+	        translateY: [60, 0],
+	        easing: 'easeOutCubic',
+	        delay: function(el, i) {
+		      return 300 + 120 * i;
+		    } 
+  		})
+  	}
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.project1 {
-	transition-delay: 250ms;
-}
-.project2 {
-	transition-delay: 400ms;
-}
-.project3 {
-	transition-delay: 600ms;
-}
-.project4 {
-	transition-delay: 800ms;
-}
-.project5 {
-	transition-delay: 1000ms;
-}
-.project6 {
-	transition-delay: 1200ms;
-}
+	.project__grid {
+		display: grid;
+	    grid-template-columns: 1fr 1fr 1fr;
+	    grid-template-rows: auto;
+	    grid-gap: 30px;
+	    padding: 50px 130px;
+
+	    .project__grid-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(136, 168, 188, .2);
+			color: rgba(136, 168, 188, 1);
+			height: 300px;
+			border-radius: 20px;
+			opacity: 0;
+	    }
+	}
 </style>

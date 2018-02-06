@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 // Components
 import navigation from '@/components/navigation'
+import homeProjects from '@/components/homeProjects'
 
 // Pages
 import Home from '@/pages/Home'
@@ -14,6 +15,7 @@ import Contact from '@/pages/Contact'
 import customerMopa from '@/projects/customerMopa'
 
 Vue.component('navigation', navigation)
+Vue.component('homeProjects', homeProjects)
 
 Vue.use(Router)
 
@@ -45,5 +47,8 @@ export default new Router({
       name: 'customerMopa',
       component: customerMopa
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
