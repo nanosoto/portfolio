@@ -226,6 +226,18 @@ export default {
 				&:hover {
 					color: #4b5a63;
 				}
+
+			}
+
+			.nav__item:last-child a {
+				margin: 0;
+
+				&.router-link-active, 
+				&:hover {
+					&:after {
+						right: -12px;
+					}
+				}
 			}
 		}
 

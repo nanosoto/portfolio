@@ -43,8 +43,8 @@ export default {
 	        	duration: 800
 	        },
 	        height: {
-	        	value: [400, 600],
-	        	duration: 800
+	        	value: [0, 600],
+	        	duration: 1400
 	        },
 	        easing: 'easeOutCubic'
   		})
@@ -63,7 +63,7 @@ export default {
 	        translateY: [250, 0],
 	        duration: 1600,
 	        easing: 'easeOutCubic',
-	        offset: '-=1450'
+	        offset: '-=1250'
   		})
   		.add({
 	  		targets: '.about__body-wrapper',

@@ -2,6 +2,7 @@
   <div id="app">
     <navigation></navigation>
     <router-view></router-view>
+    <footer-nanosoto></footer-nanosoto>
   </div>
 </template>
 

@@ -5,7 +5,9 @@
 		  <div class="project__intro-wrapper">
 
 		  	<div class="project__hero">
-				<img class="project__hero__thumbnail" src="../assets/CM/bg.jpg">
+		  		<parallax>
+					<img class="project__hero__thumbnail" src="../assets/CM/bg.jpg">
+				</parallax>
 		  	</div>
 			<img class="project__thumbnail" src="../assets/CM/CM_top.png">
 			<div class="project__overview">
@@ -56,10 +58,14 @@
 <script>
 import anime from 'animejs'
 import Intersect from 'vue-intersect'
+import Parallax from 'vue-parallaxy'
 
 export default {
   name: 'customerMopa',
-  components: { Intersect },
+  components: {
+      Parallax,
+      Intersect,
+  },
   methods: {
     projectIn() {
   		anime.timeline()
@@ -91,7 +97,7 @@ export default {
 	        	duration: 400
 	        },
 	        translateY: {
-	        	value: [20, 0],
+	        	value: [60, 0],
 	        	duration: 1800
 	        },
 	        offset: '-=1200',
@@ -145,9 +151,9 @@ export default {
 		z-index: -1;
 
 		.project__hero__thumbnail {
-			height: 700px;
-			width: 100%;
-			object-fit: cover;
+			// height: 700px;
+			// width: 100%;
+			// object-fit: cover;
 		}
 	}
 	.project__thumbnail {

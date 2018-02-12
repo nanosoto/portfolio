@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 // Components
 import navigation from '@/components/navigation'
+import footerNanosoto from '@/components/footerNanosoto'
 import homeProjects from '@/components/homeProjects'
 
 // Pages
@@ -15,6 +16,7 @@ import Contact from '@/pages/Contact'
 import customerMopa from '@/projects/customerMopa'
 
 Vue.component('navigation', navigation)
+Vue.component('footerNanosoto', footerNanosoto)
 Vue.component('homeProjects', homeProjects)
 
 Vue.use(Router)

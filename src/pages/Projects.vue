@@ -5,32 +5,32 @@
 
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 1</h1>
+					<h1>customer mopa</h1>
 				</router-link>
 			</div>
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 2</h1>
+					<h1>TUS</h1>
 				</router-link>
 			</div>
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 3</h1>
+					<h1>UPONOR</h1>
 				</router-link>
 			</div>
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 4</h1>
+					<h1>Marketing y comunicación</h1>
 				</router-link>
 			</div>
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 5</h1>
+					<h1>GESSAN</h1>
 				</router-link>
 			</div>
 			<div class="project__grid-item">
 				<router-link to="/projects/customer-mopa">
-					<h1>Project 6</h1>
+					<h1>Taste compass</h1>
 				</router-link>
 			</div>
 
@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 	.project__grid {
 		display: grid;
-	    grid-template-columns: 1fr 1fr 1fr;
+	    grid-template-columns: 1fr 1fr;
 	    grid-template-rows: auto;
 	    grid-gap: 30px;
 	    padding: 50px 130px;
@@ -77,7 +77,7 @@ export default {
 			align-items: center;
 			background: rgba(136, 168, 188, .2);
 			color: rgba(136, 168, 188, 1);
-			height: 300px;
+			height: 400px;
 			border-radius: 20px;
 			opacity: 0;
 	    }
