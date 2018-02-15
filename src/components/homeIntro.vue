@@ -404,8 +404,6 @@
 			transform-origin: 50% 50%;
 
 			&:hover {
-				color: #53a99f;
-				border-color: #53a99f;
 				background: #a9fff7;
 			}
 		}
@@ -588,11 +586,10 @@
 			padding: 0 0 5px 0;
 			list-style: none;
 			text-align: center;
-			color: #41d3bc;
 			position: relative;
 
 			&:hover {
-				color: #53a99f;
+				color: #000;
 
 				&:after {
 					content:'>>';

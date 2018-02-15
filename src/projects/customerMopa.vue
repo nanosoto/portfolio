@@ -37,8 +37,29 @@
 		<div class="project__body-wrapper">
 			<div class="project__body">
 
-				<h3>CHALLENGE</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				<h3>Programador de tareas <br><i>// de mantenimiento periódico automático</i></h3>
+				<p>Este proyecto nace de la necesidad de dotar de una webapp que sirva como herramienta para agilizar la creación y flujo de tareas de mantenimiento e incidencias entre usuarios y los técnicos de soporte responsables.
+				</p>
+				<p>
+				Los principales requisitos o necesidades que se nos plantean al afrontar el proyecto y sobre los que necesitamos basar las líneas  de actuación del proyecto son:</p>
+
+				<div class="full-width three-cols">
+					<div class="col-1">
+						<img class="project__hero__thumbnail" src="../assets/CM/multidevice.svg">
+						<h2>Multidevice</h2>
+						<p>Webapp responsive adaptable a todos los dispositivos</p>
+					</div>
+					<div class="col-1">
+						<img class="project__hero__thumbnail" src="../assets/CM/intuitiva.svg">
+						<h2>Intuitiva</h2>
+						<p>Fácil de manejar para todos los perfiles de usuario</p>
+					</div>
+					<div class="col-1">
+						<img class="project__hero__thumbnail" src="../assets/CM/escalable.svg">
+						<h2>Scalability</h2>
+						<p>Habilidad para crecer y adaptarse a los cambios</p>
+					</div>
+				</div>
 
 				<h3>GOALS</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -56,72 +77,72 @@
 </template>
 
 <script>
-import anime from 'animejs'
-import Intersect from 'vue-intersect'
-import Parallax from 'vue-parallaxy'
+	import anime from 'animejs'
+	import Intersect from 'vue-intersect'
+	import Parallax from 'vue-parallaxy'
 
-export default {
-  name: 'customerMopa',
-  components: {
-      Parallax,
-      Intersect,
-  },
-  methods: {
-    projectIn() {
-  		anime.timeline()
-  		.add({
-	  		targets: '.project__hero',
-	        opacity: {
-	        	value: [0, 1],
-	        	duration: 800
-	        },
-	        height: {
-	        	value: [0, 700],
-	        	duration: 1600
-	        },
-	        easing: 'easeOutCubic'
-  		})
-  		.add({
-	  		targets: '.project__hero__thumbnail',
-	        scale: {
-	        	value: [1.2, 1],
-	        	duration: 2000
-	        },
-	        easing: 'easeOutCubic',
-	        offset: 0
-  		})
-  		.add({
-	  		targets: '.project__thumbnail',
-	        opacity: {
-	        	value: [0, 1],
-	        	duration: 400
-	        },
-	        translateY: {
-	        	value: [60, 0],
-	        	duration: 1800
-	        },
-	        offset: '-=1200',
-	        easing: 'easeOutCubic',
-  		})
-  		.add({
-	  		targets: '.project__overview .row',
-	        opacity: {
-	        	value: [0, 1],
-	        	duration: 400
-	        },
-	        translateY: {
-	        	value: [20, 0],
-	        	duration: 1400
-	        },
-	        offset: '-=1800',
-	        easing: 'easeOutCubic',
-	        delay: function(el, i) {
-		      return 300 + 120 * i;
-		    }
-  		})
-  	}
-  }
-}
+	export default {
+	  name: 'customerMopa',
+	  components: {
+	      Parallax,
+	      Intersect,
+	  },
+	  methods: {
+	    projectIn() {
+	  		anime.timeline()
+	  		.add({
+		  		targets: '.project__hero',
+		        opacity: {
+		        	value: [0, 1],
+		        	duration: 800
+		        },
+		        height: {
+		        	value: [0, 700],
+		        	duration: 1600
+		        },
+		        easing: 'easeOutCubic'
+	  		})
+	  		.add({
+		  		targets: '.project__hero__thumbnail',
+		        scale: {
+		        	value: [1.2, 1],
+		        	duration: 2000
+		        },
+		        easing: 'easeOutCubic',
+		        offset: 0
+	  		})
+	  		.add({
+		  		targets: '.project__thumbnail',
+		        opacity: {
+		        	value: [0, 1],
+		        	duration: 400
+		        },
+		        translateY: {
+		        	value: [60, 0],
+		        	duration: 1800
+		        },
+		        offset: '-=1200',
+		        easing: 'easeOutCubic',
+	  		})
+	  		.add({
+		  		targets: '.project__overview .row',
+		        opacity: {
+		        	value: [0, 1],
+		        	duration: 400
+		        },
+		        translateY: {
+		        	value: [20, 0],
+		        	duration: 1400
+		        },
+		        offset: '-=1800',
+		        easing: 'easeOutCubic',
+		        delay: function(el, i) {
+			      return 300 + 120 * i;
+			    }
+	  		})
+	  	}
+	  }
+	}
 </script>
 
 <style lang="scss" scoped>
@@ -193,7 +214,7 @@ export default {
 	}
 	.project__body-wrapper {
 		display: grid;
-	    grid-template-columns: 1fr 1fr 1fr 1fr;
+	    grid-template-columns: 400px 1fr 1fr 400px;
 
 	    .project__body {
 	    	grid-area: 1 / 2 / end / 4;
@@ -203,12 +224,54 @@ export default {
 				text-transform: uppercase;
 				font-weight: 500;
 				letter-spacing: 0.5px;
-				font-size: 28px;
-				margin: 0 0 10px;
+				font-size: 32px;
+				margin: 0 0 45px;
+				color: #1976d2;
+				line-height: 1.4;
+
+				i {
+					font-weight: 200;
+					font-style: italic;
+				}
 	    	}
 
 	    	p {
 	    		margin: 0 0 45px;
+	    	}
+
+	    	.full-width {
+	    		margin: 50px -400px 50px;
+	    	}
+
+	    	.three-cols {
+	    		display: flex;
+	    		padding: 0 130px;
+	    		justify-content: space-around;
+	    		align-items: center;
+
+	    		.col-1 {
+	    			display: flex;
+	    		 	flex-direction: column;
+	    		 	text-align: center;
+		    		justify-content: center;
+		    		align-items: center;
+		    		width: 30%;
+	    		}
+
+	    		h2 {
+	    			color: #1976d2;
+	    			font-weight: 600;
+	    			line-height: 1.6;
+	    		}
+	    		p {
+	    			color: #42a5f5;
+	    		}
+
+	    		img {
+	    			width: 200px;
+	    			height: auto;
+	    			margin: 0 auto 15px;
+	    		}
 	    	}
 	    }
 	}

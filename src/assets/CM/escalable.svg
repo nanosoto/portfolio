@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 166 166" style="enable-background:new 0 0 166 166;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BBE4FF;}
+	.st1{fill:none;stroke:#1976D2;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:#1976D2;}
+	.st3{fill:none;stroke:#42A5F5;stroke-width:4.732;stroke-miterlimit:10;stroke-dasharray:12;}
+	.st4{fill:#FFFFFF;stroke:#1976D2;stroke-width:4.732;stroke-miterlimit:10;}
+</style>
+<g>
+	<ellipse class="st0" cx="83.1" cy="145.3" rx="61" ry="7.6"/>
+	<g>
+		<g>
+			<g>
+				<line class="st1" x1="105" y1="44.2" x2="120.6" y2="28.7"/>
+				<g>
+					<polygon class="st2" points="122.2,44.4 119.2,44.3 119.7,29.5 105,30.1 104.8,27.1 122.9,26.4 					"/>
+				</g>
+			</g>
+		</g>
+		<path class="st3" d="M127.6,114.4H30.3v-93c0-4.6,3.7-8.3,8.3-8.3h97.3v93C135.8,110.7,132.1,114.4,127.6,114.4z"/>
+		<path class="st4" d="M79.2,122.7H21.9V68.1c0-4.6,3.7-8.3,8.3-8.3h57.3v54.7C87.5,119,83.8,122.7,79.2,122.7z"/>
+	</g>
+</g>
+</svg>

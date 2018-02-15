@@ -18,7 +18,7 @@
 import anime from 'animejs'
 
 export default {
-  name: 'footer',
+  name: 'footer-portfolio',
 }
 </script>
 
@@ -32,12 +32,11 @@ export default {
 		border-top: 1px solid rgba(136, 168, 188, 0.2);
 
 		a {
-			color: #41d3bc;
 			margin: 0 35px 0 0;
 			position: relative;
 
 			&:hover {
-				color: #53a99f;
+				color: #000;
 				
 				&:after {
 					content:'>>';
