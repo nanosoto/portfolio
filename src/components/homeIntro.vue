@@ -608,4 +608,7 @@
 		width: 100%;
 		overflow: visible;
 	}
+	.Masthead__image {
+		overflow: visible;
+	}
 </style>

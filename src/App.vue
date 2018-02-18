@@ -57,7 +57,7 @@ a {
 }
 
 p {
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .intro__tagline span {
