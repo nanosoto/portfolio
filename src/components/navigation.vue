@@ -12,9 +12,11 @@
 				<li class="nav__item">
 					<router-link to="/about">about me</router-link>
 				</li>
+				<!--
 				<li class="nav__item">
 					<router-link to="/contact">contact</router-link>
 				</li>
+				-->
 			</ul>
 		</div>
 	</transition>

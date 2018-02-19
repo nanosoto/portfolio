@@ -1,34 +1,36 @@
 <template>
 
-<intersect @enter.once="aboutIn">
   <div class="about__wrapper">
-	<div class="about__hero">
-		<h1>Experience design and intelligent marketing for growing brands.<span>We focus on driving results.</span></h1>
-		<img class="about__hero__thumbnail" src="../assets/about/1.jpg">
-	</div>
+	<intersect @enter.once="aboutIn">
+		<div class="about__hero">
+			<h1>Product designer focused on<br><span>UX / UI and front-end development.</span></h1>
+			<img class="about__hero__thumbnail" src="../assets/about/1.jpg">
+		</div>
+	</intersect>
 	<div class="about__body-wrapper">
 		<div class="about__body">
 			<div class="body__row">
 				<p>Passionate product designer currently helping to define the overall experience and visual interface of CIC Consulting Informático products and the brand and marketing strategy aroud them. 4 years experience wireframing, coding, prototyping and conceptualizing digital products alongside engineers and business developers. Freelancing has given me the chance to solve design problems from start to finish and achieve valuable experience of project ownership.</p>
 			</div>
-			<div class="body__row aptitudes">
-				<div class="aptitudes__col">
-					<img class="aptitudes__icon" src="../assets/about/product-design.svg">
+			<div class="body__row skills">
+				<div class="skills__col">
+					<img class="skills__icon" src="../assets/about/product-design.svg">
 					<h1>Product design</h1>
 				</div>
-				<div class="aptitudes__col">
-					<img class="aptitudes__icon" src="../assets/about/ux-design.svg">
+				<div class="skills__col">
+					<img class="skills__icon" src="../assets/about/ux-design.svg">
 					<h1>UX design</h1>
 				</div>
-				<div class="aptitudes__col">
-					<img class="aptitudes__icon" src="../assets/about/ui-design.svg">
+				<div class="skills__col">
+					<img class="skills__icon" src="../assets/about/ui-design.svg">
 					<h1>UI design</h1>
 				</div>
-				<div class="aptitudes__col">
-					<img class="aptitudes__icon" src="../assets/about/interaction-design.svg">
+				<div class="skills__col">
+					<img class="skills__icon" src="../assets/about/interaction-design.svg">
 					<h1>Interaction design</h1>
 				</div>
 			</div>
+			<!--
 			<div class="body__row">	
 				<h3>Work experience</h3>
 				<h1>PRODUCT DESIGNER</h1>
@@ -49,31 +51,40 @@
 				<h2>Bachelor of Arts in Design (Communications)</h2>
 				<h4>International student, 2011 - 2012</h4>
 			</div>
-			<div class="body__row">
-				<h3>Skills</h3>
-				<ul>
-					<li>Product Design</li>
-					<li>Use experience design</li>
-					<li>User interface design</li>
-					<li>Interaction design</li>
-					<li>HTML / CSS</li>
-					<li>JavaScript</li>
-					<li>Wordpress</li>
-					<li>GIT / SVN</li>
-					<li>Sass / Responsive web</li>
-					<li>Vue.js</li>
-					<li>Design Systems</li>
-					<li>User centered design</li>
-					<li>Prototyping / Wireframing</li>
-					<li>Multidevice design</li>
-					<li>Design strategy</li>
-					<li>Photoshop / Illustrator / AE</li>
-				</ul>
+			-->
+			<intersect @enter.once="skillsIn">
+				<div class="body__row">
+					<h3>Skills</h3>
+					<div class="skills__list">
+						<ul>
+							<li>Product Design</li>
+							<li>Use experience design</li>
+							<li>User interface design</li>
+							<li>Interaction design</li>
+							<li>HTML / CSS</li>
+							<li>JavaScript</li>
+							<li>Wordpress</li>
+							<li>GIT / SVN</li>
+						</ul>
+						<ul>
+							<li>Sass / Responsive web</li>
+							<li>Vue.js</li>
+							<li>Design Systems</li>
+							<li>User centered design</li>
+							<li>Prototyping / Wireframing</li>
+							<li>Multidevice design</li>
+							<li>Design strategy</li>
+							<li>Photoshop / Illustrator / AE</li>
+						</ul>
+					</div>
+				</div>
+			</intersect>
+			<div class="body__row download-cv">
+				<router-link class="btn" target="_blank" to="/static/FernandoSoto_CV.pdf">Download CV (.pdf)</router-link>
 			</div>
 		</div>
 	</div>
   </div>
- </intersect>
 
 </template>
 
@@ -101,7 +112,19 @@ export default {
 	        easing: 'easeOutCubic',
 	        offset: '-=1650'
   		})
-  	}
+  	},
+	skillsIn() {
+  		anime.timeline()
+  		.add({
+			targets: '.skills__list li',
+			opacity: [0, 1],
+			translateY: [20, 0],
+			duration: 1600,
+			delay: function (el, i) {
+				return 800 + 45 * i
+			}
+		})
+	}
   }
 }
 </script>
@@ -118,7 +141,6 @@ export default {
 		width: 100vw;
 		display: flex;
 		align-items: flex-end;
-		justify-content: center;
 		padding: 0 130px;
 		height: 600px;
 
@@ -203,14 +225,14 @@ export default {
 	    		margin: 0 0 25px;
 	    	}
 
-			.aptitudes {
+			.skills {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
 				justify-content: center;
 				align-items: center;
 
-				.aptitudes__col {
+				.skills__col {
 					flex-grow: 0;
 					flex-shrink: 0;
 					flex-basis: 50%;
@@ -220,7 +242,7 @@ export default {
 					align-items: center;
 					margin: 0 0 90px;
 
-					.aptitudes__icon {
+					.skills__icon {
 						width: auto;
 						height: 100px;
 						margin: 0 0 15px;
@@ -232,6 +254,43 @@ export default {
 					}
 				}
 			}
+
+			.skills__list {
+				display: flex;
+				ul {
+					flex-grow: 0;
+					flex-shrink: 0;
+					flex-basis: 50%;
+
+					li {
+						display: block;
+						margin: 0 0 15px;
+						opacity: 0;
+					}
+				}
+			}
 	    }
+
+		.btn {
+			height: 50px;
+			border: 3px solid rgba(136, 168, 188, 0.2);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 300px;
+
+			&:hover {
+				border-color:  rgba(136, 168, 188, 0.6);
+			}
+		}
+
+		.download-cv {
+			background-color: rgba(136, 168, 188, 0.2);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 250px;
+			margin: 90px 0;
+		}
 	}
 </style>
