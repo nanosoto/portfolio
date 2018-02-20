@@ -58,7 +58,7 @@
 					<div class="skills__list">
 						<ul>
 							<li>Product Design</li>
-							<li>Use experience design</li>
+							<li>User experience design</li>
 							<li>User interface design</li>
 							<li>Interaction design</li>
 							<li>HTML / CSS</li>
@@ -121,7 +121,7 @@ export default {
 			translateY: [20, 0],
 			duration: 1600,
 			delay: function (el, i) {
-				return 800 + 45 * i
+				return 400 + 45 * i
 			}
 		})
 	}
