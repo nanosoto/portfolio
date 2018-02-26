@@ -4,7 +4,7 @@
 	<intersect @enter.once="aboutIn">
 		<div class="about__hero">
 			<h1>Product designer focused on<br><span>UX / UI and front-end development.</span></h1>
-			<img class="about__hero__thumbnail" src="../assets/about/1.jpg">
+			<!--<img class="about__hero__thumbnail" src="../assets/about/1.jpg">-->
 		</div>
 	</intersect>
 	<div class="about__body-wrapper">
@@ -131,7 +131,7 @@ export default {
 
 <style lang="scss" scoped>
 	.about__hero {
-		overflow: hidden;
+		// overflow: hidden;
 		transform-origin: 0 0;
 		position: relative;
 		top: -87px;
@@ -158,16 +158,16 @@ export default {
 		h1 {
 			font-family: 'Rubik', sans-serif;
 			font-size: 54px;
-			font-weight: 500;
 			line-height: 1.4;
-			color: rgba(255, 255, 255, 1);
+			// color: rgba(255, 255, 255, 1);
 			z-index: 1;
 			opacity: 0;
 			margin: 0 0 130px;
 			mix-blend-mode: lighten;
 
 			span {
-				color: rgba(255, 255, 255, .6);
+				// color: rgba(255, 255, 255, .6);
+				font-weight: 500;
 			}
 		}
 	}

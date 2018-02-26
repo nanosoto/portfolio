@@ -1,7 +1,7 @@
 <template>
 	
 	<transition appear v-on:appear="navigationIn">
-		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/about' }">
+		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/about-caster' }">
 
 			<router-link to="/" class="nav__logo">nanosoto</router-link>
 
@@ -28,29 +28,6 @@ import anime from 'animejs'
 
 export default {
   name: 'navigation',
-  data() {
-  	return {
-  		lightNav: false
-  	}
-  },
-  beforeRouteUpdate (to, from, next) {
-
-  },
-  watch: {
-    '$route' () {
-      if (this.$route.path === '/projects/customer-mopa') {
-        this. lightNav = true
-      }
-      else if (this.$route.path === '/about') {
-		this. lightNav = true
-      } else {
-        this. lightNav = false
-      }  
-    }
-  },
-  created: function () {
-    // this. lightNav = true
-  },
   methods: {
   	navigationIn() {
   		anime.timeline()
@@ -92,7 +69,7 @@ export default {
 		margin: 0 130px;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid rgba(136, 168, 188, .2);
+		border-bottom: 1px solid hsla(203, 28%, 90%, 1);
     	position: relative;
 		z-index: 100;
 		

@@ -33,7 +33,7 @@ body {
   overflow-y: scroll;
   min-height: 100vh;
   background-color: var(--body-background-color, #FFF);
-  color: var(--body-text-color, #88a8bc);
+  color: var(--body-text-color, hsla(203, 28%, 54%, 1));
 
   font-size: var(--font-size-base);
   letter-spacing : 0.14px;
@@ -66,7 +66,7 @@ p {
 
   &:nth-child(11) {
     font-style: italic;
-    color: rgba(136, 168, 188, .6);
+    color: hsla(203, 28%, 74%, 1);
     font-weight: 400;
   }
 
