@@ -79,4 +79,14 @@ p {
   display: inline-block;
   min-width: 13.34px;
 }
+
+.about__tagline span,
+ .about__subTagline span {
+  display: inline-block;
+  min-width: 11.4px;
+}
+
+.home__intro .Masthead__image.is-parallax {
+  overflow: visible;
+}
 </style>

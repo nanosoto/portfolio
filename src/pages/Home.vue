@@ -3,20 +3,20 @@
 
 		<home-intro></home-intro>
 
-		<home-projects></home-projects>
+		<portfolio-projects></portfolio-projects>
 
 	</div>
 </template>
 
 <script>
 import anime from 'animejs'
-import homeProjects from '@/components/homeProjects'
+import portfolioProjects from '@/components/portfolioProjects'
 import homeIntro from '@/components/homeIntro'
 
 export default {
   name: 'home',
   components: {
-	'home-projects': homeProjects,
+	'portfolio-projects': portfolioProjects,
 	'home-intro': homeIntro
   },
 }

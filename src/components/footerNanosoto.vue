@@ -29,7 +29,7 @@ export default {
 		margin: 0 130px;
 		display: flex;
 		justify-content: space-between;
-		border-top: 1px solid rgba(136, 168, 188, 0.2);
+		border-top: 1px solid hsla(203, 28%, 90%, 1);
 
 		a {
 			margin: 0 35px 0 0;

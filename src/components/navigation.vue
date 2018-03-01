@@ -1,7 +1,7 @@
 <template>
 	
 	<transition appear v-on:appear="navigationIn">
-		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/about-caster' }">
+		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/about-caster' , halfLightNav: $route.path === '/about' }">
 
 			<router-link to="/" class="nav__logo">nanosoto</router-link>
 
@@ -12,11 +12,9 @@
 				<li class="nav__item">
 					<router-link to="/about">about me</router-link>
 				</li>
-				<!--
 				<li class="nav__item">
 					<router-link to="/contact">contact</router-link>
 				</li>
-				-->
 			</ul>
 		</div>
 	</transition>
@@ -156,6 +154,17 @@ export default {
 			.nav__item a:hover,
 			.nav__logo:hover {
 					color: rgba(255, 255, 255, .6);
+			}
+		}
+
+		&.halfLightNav {
+
+			.nav__item {
+				color: #FFF;
+				
+				a:hover {
+					color: rgba(255, 255, 255, .6);
+				}
 			}
 		}
 	}

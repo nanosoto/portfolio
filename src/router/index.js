@@ -4,7 +4,8 @@ import Router from 'vue-router'
 // Components
 import navigation from '@/components/navigation'
 import footerNanosoto from '@/components/footerNanosoto'
-import homeProjects from '@/components/homeProjects'
+import portfolioProjects from '@/components/portfolioProjects'
+import formContact from '@/components/formContact'
 
 // Pages
 import Home from '@/pages/Home'
@@ -17,40 +18,40 @@ import customerMopa from '@/projects/customerMopa'
 
 Vue.component('navigation', navigation)
 Vue.component('footerNanosoto', footerNanosoto)
-Vue.component('homeProjects', homeProjects)
+Vue.component('portfolioProjects', portfolioProjects)
+Vue.component('formContact', formContact)
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/projects',
-      name: 'Projects',
-      component: Projects
-    },
-    {
-      path: '/about',
-      name: 'About',
-      component: About
-    },
-    {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
-    },
-    {
-      path: '/projects/customer-mopa',
-      name: 'customerMopa',
-      component: customerMopa
+    mode: 'history',
+    routes: [{
+            path: '/',
+            name: 'Home',
+            component: Home
+        },
+        {
+            path: '/projects',
+            name: 'Projects',
+            component: Projects
+        },
+        {
+            path: '/about',
+            name: 'About',
+            component: About
+        },
+        {
+            path: '/contact',
+            name: 'Contact',
+            component: Contact
+        },
+        {
+            path: '/projects/customer-mopa',
+            name: 'customerMopa',
+            component: customerMopa
+        }
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        return { x: 0, y: 0 }
     }
-  ],
-  scrollBehavior (to, from, savedPosition) {
-    return { x: 0, y: 0 }
-  }
 })

@@ -1,14 +1,19 @@
 <template>
 
   <div>
-    <h1>Contact</h1>
+    <form-contact></form-contact>
   </div>
 
 </template>
 
 <script>
+import formContact from '@/components/formContact'
+
 export default {
-  name: 'contact'
+  name: 'contact',
+  components: {
+	'form-contact': formContact,
+  },
 }
 </script>
 

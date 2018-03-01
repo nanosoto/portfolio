@@ -3,8 +3,13 @@
   <div class="about__wrapper">
 	<intersect @enter.once="aboutIn">
 		<div class="about__hero">
-			<h1>Product designer focused on<br><span>UX / UI and front-end development.</span></h1>
-			<!--<img class="about__hero__thumbnail" src="../assets/about/1.jpg">-->
+			<h2 id="tagline" class="about__tagline">Product designer focused on</h2>
+			<h2 id="subTagline" class="about__subTagline">User experience. UI . Frontend.</h2>
+			<div class="about__thumbnail-wrapper">
+				<parallax :speedFactor="0.25">
+					<img class="about__thumbnail" src="../assets/about/1.jpg">
+				</parallax>
+			</div>
 		</div>
 	</intersect>
 	<div class="about__body-wrapper">
@@ -91,28 +96,66 @@
 <script>
 import anime from 'animejs'
 import Intersect from 'vue-intersect'
+import Parallax from 'vue-parallaxy'
 
 export default {
   name: 'about',
-  components: { Intersect },
+  components: {
+	Parallax,
+	Intersect,
+  },
   methods: {
-    aboutIn() {
-  		anime.timeline()
-  		.add({
-	  		targets: '.about__hero__thumbnail',
-			scale: [1.1, 1],
-			duration: 1800,
-	        easing: 'easeOutCubic'
-  		})
-  		.add({
-	  		targets: '.about__hero h1',
-	        opacity: [0, 1],
-	        translateY: [250, 0],
-	        duration: 1800,
-	        easing: 'easeOutCubic',
-	        offset: '-=1650'
-  		})
-  	},
+    aboutIn: function (el) {
+		var text = document.getElementById('tagline')
+		var msg = text.textContent
+		msg = msg.split('')
+		text.innerHTML = '<span class="letter">' + msg.join('</span><span class="letter">') + '</span>'
+
+
+		var text = document.getElementById('subTagline')
+		var msg = text.textContent
+		msg = msg.split('')
+		text.innerHTML = '<span class="letter">' + msg.join('</span><span class="letter">') + '</span>'
+
+		anime.timeline()
+		.add({
+			targets: '.about__tagline .letter',
+			opacity: [0, 1],
+			translateY: [50, 0],
+			easing: 'easeOutExpo',
+			duration: 1400,
+			delay: function (el, i) {
+				return 0 + 15 * i
+			}
+		})
+		.add({
+			targets: '.about__subTagline .letter',
+			opacity: [0, 1],
+			translateY: [50, 0],
+			easing: 'easeOutExpo',
+			duration: 1400,
+			offset: '-=1600',
+			delay: function (el, i) {
+				return 0 + 15 * i
+			}
+		})
+		.add({
+			targets: '.about__thumbnail-wrapper',
+			height: [0, 600],
+			opacity: [0, 1],
+			duration: 2400,
+			easing: 'easeOutExpo',
+			offset: '-=2000',
+		})
+		.add({
+			targets: '.about__thumbnail',
+			translateY: [50, 0],
+			scale: [1, 1.2],
+			duration: 2800,
+			easing: 'easeOutExpo',
+			offset: '-=2600',
+		})
+	},
 	skillsIn() {
   		anime.timeline()
   		.add({
@@ -121,7 +164,7 @@ export default {
 			translateY: [20, 0],
 			duration: 1600,
 			delay: function (el, i) {
-				return 400 + 45 * i
+				return 200 + 45 * i
 			}
 		})
 	}
@@ -131,43 +174,45 @@ export default {
 
 <style lang="scss" scoped>
 	.about__hero {
-		// overflow: hidden;
-		transform-origin: 0 0;
-		position: relative;
-		top: -87px;
-		left: 0;
-		z-index: -1;
-		width: 100%;
-		width: 100vw;
 		display: flex;
-		align-items: flex-end;
-		padding: 0 130px;
+		justify-content: flex-end;
+		flex-direction: column;
+		padding: 130px;
 		height: 600px;
 
-		.about__hero__thumbnail {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 600px;
-			width: 100%;
-			max-width: 2904px;
-			object-fit: cover;
-			transform: scale(1.1);
-		}
-
-		h1 {
+		h2 {
 			font-family: 'Rubik', sans-serif;
 			font-size: 54px;
 			line-height: 1.4;
-			// color: rgba(255, 255, 255, 1);
 			z-index: 1;
-			opacity: 0;
-			margin: 0 0 130px;
-			mix-blend-mode: lighten;
+			margin: 0;
+			mix-blend-mode: screen;
+    		color: hsla(203, 28%, 74%, 1);
 
 			span {
-				// color: rgba(255, 255, 255, .6);
 				font-weight: 500;
+    			color: hsla(203, 28%, 54%, 1);
+			}
+
+			&.about__subTagline {
+				color: hsla(203, 28%, 54%, 1);
+				font-weight: 500;
+			}
+		}
+
+		.about__thumbnail-wrapper {
+			opacity: 0;
+			width: 500px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			overflow: hidden; 
+			transform-origin: bottom;
+
+			.about__thumbnail {
+				width: 100%;
+				height: 600px;
+				object-fit: cover;
 			}
 		}
 	}
@@ -273,19 +318,20 @@ export default {
 
 		.btn {
 			height: 50px;
-			border: 3px solid rgba(136, 168, 188, 0.2);
+			border: 3px solid hsla(203, 28%, 74%, 1);
+			color: hsla(203, 28%, 54%, 1);
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 300px;
 
 			&:hover {
-				border-color:  rgba(136, 168, 188, 0.6);
+				border-color: hsla(203, 28%, 54%, 1);
 			}
 		}
 
 		.download-cv {
-			background-color: rgba(136, 168, 188, 0.2);
+			background-color: hsla(203, 28%, 94%, 1);
 			display: flex;
 			justify-content: center;
 			align-items: center;

@@ -375,7 +375,7 @@
 	.home__intro {
 		display: flex;
 		flex-direction: column;
-		margin: 0 0 287px;
+		margin: 0 0 160px;
 		padding: 0;
 		align-items: center;
 		justify-content: center;
@@ -608,7 +608,5 @@
 		width: 100%;
 		overflow: visible;
 	}
-	.Masthead__image {
-		overflow: visible;
-	}
+
 </style>

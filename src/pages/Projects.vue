@@ -1,66 +1,64 @@
 <template>
+	<intersect @enter.once="projectGridIn">
+		<div class="project__grid">
 
-		<intersect @enter.once="projectGridIn">
-	<div class="project__grid">
+				<div class="project__grid-item">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/cm/bg.jpg">
+						</div>
+						<h1>customer mopa</h1>
+						<p>Strategy, Concept, UI, UX, Development</p>
+					</router-link>
+				</div>
+				<div class="project__grid-item disabled">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/projects/tus.jpg">
+						</div>
+						<h1>Totem TUS / soon</h1>
+						<p>UI, UX, Development</p>
+					</router-link>
+				</div>
+				<div class="project__grid-item disabled">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/projects/uponor.jpg">
+						</div>
+						<h1>UPONOR / soon</h1>
+						<p>UI, UX</p>
+					</router-link>
+				</div>
+				<div class="project__grid-item disabled">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/projects/mkt.jpg">
+						</div>
+						<h1>CIC | Marketing y comunicación (soon)</h1>
+						<p>Strategy, Concept, UI, UX, Development</p>
+					</router-link>
+				</div>
+				<div class="project__grid-item disabled">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/projects/gessan.jpg">
+						</div>
+						<h1>GESSAN / soon</h1>
+						<p>UI, UX</p>
+					</router-link>
+				</div>
+				<div class="project__grid-item disabled">
+					<router-link to="/projects/customer-mopa">
+						<div class="project__grid-thumbnail">
+							<img class="thumbnail" src="../assets/projects/tc.jpg">
+						</div>
+						<h1>Taste compass / soon</h1>
+						<p>Strategy, Concept, UI, UX, Development</p>
+					</router-link>
+				</div>
 
-			<div class="project__grid-item">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/cm/bg.jpg">
-					</div>
-					<h1>customer mopa</h1>
-					<p>Strategy, Concept, UI, UX, Development</p>
-				</router-link>
-			</div>
-			<div class="project__grid-item disabled">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/projects/tus.jpg">
-					</div>
-					<h1>Totem TUS (soon)</h1>
-					<p>UI, UX, Development</p>
-				</router-link>
-			</div>
-			<div class="project__grid-item disabled">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/projects/uponor.jpg">
-					</div>
-					<h1>UPONOR (soon)</h1>
-					<p>UI, UX</p>
-				</router-link>
-			</div>
-			<div class="project__grid-item disabled">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/projects/mkt.jpg">
-					</div>
-					<h1>CIC | Marketing y comunicación (soon)</h1>
-					<p>Strategy, Concept, UI, UX, Development</p>
-				</router-link>
-			</div>
-			<div class="project__grid-item disabled">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/projects/gessan.jpg">
-					</div>
-					<h1>GESSAN (soon)</h1>
-					<p>UI, UX</p>
-				</router-link>
-			</div>
-			<div class="project__grid-item disabled">
-				<router-link to="/projects/customer-mopa">
-					<div class="project__grid-thumbnail">
-						<img class="thumbnail" src="../assets/projects/tc.jpg">
-					</div>
-					<h1>Taste compass (soon)</h1>
-					<p>Strategy, Concept, UI, UX, Development</p>
-				</router-link>
-			</div>
-
-	</div>
-
-		</intersect>
+		</div>
+	</intersect>
 </template>
 
 <script>
@@ -75,11 +73,11 @@ export default {
   		anime.timeline()
   		.add({
 	  		targets: '.project__grid-item',
-	        opacity: [0, 1],
-	        translateY: [60, 0],
+	        translateY: [20, 0],
+			opacity: [0, 1],
 	        easing: 'easeOutCubic',
 	        delay: function(el, i) {
-		      return 300 + 120 * i;
+		      return 400 + 200 * i;
 		    } 
   		})
   	}
