@@ -1,7 +1,7 @@
 <template>
 	
 	<transition appear v-on:appear="navigationIn">
-		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/about-caster' , halfLightNav: $route.path === '/about' }">
+		<div class="nav" :class="{ lightNav: $route.path === '/projects/customer-mopa' || $route.path === '/projects/tus' , halfLightNav: $route.path === '/about' }">
 
 			<router-link to="/" class="nav__logo">nanosoto</router-link>
 

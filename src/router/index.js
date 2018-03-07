@@ -15,6 +15,7 @@ import Contact from '@/pages/Contact'
 
 // Projects
 import customerMopa from '@/projects/customerMopa'
+import tus from '@/projects/tus'
 
 Vue.component('navigation', navigation)
 Vue.component('footerNanosoto', footerNanosoto)
@@ -49,6 +50,11 @@ export default new Router({
             path: '/projects/customer-mopa',
             name: 'customerMopa',
             component: customerMopa
+        },
+        {
+            path: '/projects/tus',
+            name: 'tus',
+            component: tus
         }
     ],
     scrollBehavior(to, from, savedPosition) {

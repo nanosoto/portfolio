@@ -11,8 +11,8 @@
 						<p>Strategy, Concept, UI, UX, Development</p>
 					</router-link>
 				</div>
-				<div class="project__grid-item disabled">
-					<router-link to="/projects/customer-mopa">
+				<div class="project__grid-item">
+					<router-link to="/projects/tus">
 						<div class="project__grid-thumbnail">
 							<img class="thumbnail" src="../assets/projects/tus.jpg">
 						</div>
